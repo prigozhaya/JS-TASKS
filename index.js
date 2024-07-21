@@ -6,9 +6,8 @@
 // будет вывод элементов массива в обратном порядке в консоль.
 // Одно значение - один вывод (построчно)
 
-// forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
 
-
+//O(2n)
 function forEachRight(arr, callback) {
   arr.reverse().map((el) => callback(el));
 }
