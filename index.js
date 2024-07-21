@@ -8,7 +8,7 @@ function sumTo(n) {
 
 //O(n)
 function sumTo(n) {
-  [currValue, sum] = [0, 0];
+  let [currValue, sum] = [0, 0];
 
   while (currValue <= n) {
     sum += currValue;
