@@ -9,8 +9,8 @@ function getMaxSubSum(arr) {
   let max = 0;
 
   arr.reduce((acc, curr) => {
-    max = Math.max(max, acc);
     acc = acc + curr < 0 ? 0 : acc + curr;
+    max = Math.max(max, acc);
     return acc;
   }, 0);
 
