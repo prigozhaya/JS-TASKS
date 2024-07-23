@@ -2,10 +2,11 @@
 
 //O(kn) - the coefficient depends on the number
 function persistence(number) {
-  let [count, result] = [0, number];
+  let count = 0;
+  let result = number;
 
   while (result > 9) {
-    result = `${result}`.split("").reduce((acc, curr) => (acc = acc * curr));
+    result = `${result}`.split("").reduce((acc, curr) => acc * curr);
     count++;
   }
 
