@@ -2,13 +2,13 @@
 // Колбек-функция применяется на каждый элемент массива и проверяет условие
 // Если хотя бы один раз колбек-функция вернула true, то any возвращает true
 // Иначе - false
-// Если колбек-функция не была передана, то из any возвращаем true, 
+// Если колбек-функция не была передана, то из any возвращаем true,
 // если в массиве есть хотя бы один элемент, который дает true,
 // если все значения в массиве дают false, то возвращаем false
 
 //O(n)
-function any(array, collback = (x) => !!x === true) {
-  return array.filter(collback).length > 0;
+function any(array, collback = (x) => !!x) {
+  return array.some(collback);
 }
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // -> true
